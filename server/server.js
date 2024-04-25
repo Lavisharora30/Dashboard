@@ -2,14 +2,11 @@ const express = require('express')
 const mongoose = require('mongoose')
 const db = require('./db')
 const app = express()
-require('dotenv').config();
+//require('dotenv').config();
 app.use(express.json());
 
-const bodyParser = require('body-parser');
+require('dotenv').config();
 
-// Set the maximum payload size to 50MB (or any value suitable for your application)
-app.use(bodyParser.json({ limit: '50mb' }));
-app.use(bodyParser.urlencoded({ limit: '50mb', extended: true }));
 // Import and use your user authentication routes
 const routes = require('./router/router');
 app.use('/', routes);
