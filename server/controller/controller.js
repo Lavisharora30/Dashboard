@@ -215,7 +215,7 @@ async function filteredByCountry (req, res) {
         }
         return res.status(200).json({
             success: true,
-            message: 'Filtered by country: ${country}',
+            message: `Filtered by country: ${country}`,
             data: allData
         })
     } catch (err) {
